@@ -34,14 +34,14 @@ function MyBookings() {
     <main className="customer-page">
       <UserNavbar />
       <header className="customer-top">
-        <span className="eyebrow eyebrow-light"><span className="eyebrow-line" /> YOUR TRAVEL, ALL IN ONE PLACE</span>
-        <h1>Every stay, remembered.</h1>
-        <p>Keep track of your upcoming plans and the stays you’ve already booked.</p>
+        <span className="eyebrow eyebrow-light"><span className="eyebrow-line" /> ALL YOUR LITTLE GETAWAYS</span>
+        <h1>Every lovely stay, in one place.</h1>
+        <p>Your upcoming escapes and past stays, gathered neatly in one place.</p>
       </header>
       <div className="customer-content">
         <section className="customer-section-heading">
-          <div><h2>My bookings</h2><p>{bookings.length} {bookings.length === 1 ? "booking" : "bookings"} in your account</p></div>
-          <Link className="button button-dark" to="/home">Find another stay <span>↗</span></Link>
+          <div><h2>My stays</h2><p>{bookings.length} {bookings.length === 1 ? "booking" : "bookings"} in your account</p></div>
+          <Link className="button button-dark" to="/home">Plan another escape <span>↗</span></Link>
         </section>
         {error && <div className="alert alert-danger" role="alert">{error}</div>}
         {loading ? (
@@ -49,9 +49,9 @@ function MyBookings() {
         ) : bookings.length === 0 ? (
           <div className="booking-empty-panel">
             <span className="booking-empty-icon">✳</span>
-            <h2>Your next story starts here.</h2>
-            <p>You haven’t booked a stay yet. Explore the rooms and find a place to look forward to.</p>
-            <Link className="button button-dark" to="/home">Explore rooms <span>↗</span></Link>
+            <h2>Your next little escape starts here.</h2>
+            <p>Nothing booked just yet. Browse the rooms and find somewhere lovely to look forward to.</p>
+            <Link className="button button-dark" to="/home">Find your retreat <span>↗</span></Link>
           </div>
         ) : (
           <div className="booking-list">
@@ -71,7 +71,7 @@ function MyBookings() {
                   <div className="booking-card-bottom">
                     <div><small>TOTAL STAY</small><strong>₹{Number(b.totalAmount).toLocaleString("en-IN")}</strong></div>
                     <span className={`booking-status ${b.status === "booked" ? "status-booked" : "status-cancelled"}`}>{b.status}</span>
-                    {b.status === "booked" && <button className="booking-cancel" onClick={() => cancel(b._id)}>Cancel booking</button>}
+                    {b.status === "booked" && <button className="booking-cancel" onClick={() => cancel(b._id)}>Cancel this stay</button>}
                   </div>
                 </div>
               </article>
