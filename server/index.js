@@ -7,13 +7,14 @@ const mongoose = require("mongoose");
 const Room = require("./models/Room");
 
 const app = express();
+app.disable("x-powered-by");
 
 const allowedOrigins = (process.env.CLIENT_ORIGIN || "http://localhost:5173").split(",").map((origin) => origin.trim()).filter(Boolean);
 app.use(cors({ origin(origin, callback) {
   if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
   return callback(new Error("Origin is not allowed by CORS"));
 } }));
-app.use(express.json());
+app.use(express.json({ limit: "100kb" }));
 
 // Starter inventory is inserted by room number only when missing.
 // Existing rooms and bookings are never overwritten.
