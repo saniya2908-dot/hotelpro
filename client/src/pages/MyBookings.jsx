@@ -58,7 +58,7 @@ function MyBookings() {
             {bookings.map((b) => (
               <article className="booking-card" key={b._id}>
                 <div className="booking-card-image">
-                  <img src={b.room?.photos?.[0] || (b.room?.type === "suite" ? "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" : "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80")} alt={`${b.room?.type || "Hotel"} room`} loading="lazy" />
+                  <img src={b.room?.photos?.[0] || (b.room?.type === "suite" ? "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=85" : "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85")} alt={`${b.room?.type || "Hotel"} room`} loading="lazy" />
                 </div>
                 <div className="booking-card-details">
                   <span className="room-type">{b.room?.type || "Hotel"} · ROOM {b.room?.roomNumber || "—"}</span>
