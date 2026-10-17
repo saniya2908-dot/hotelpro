@@ -73,7 +73,7 @@ exports.login = async (req, res) => {
     });
   } catch (err) {
     console.error("Login or login-history persistence failed:", err.message);
-    res.status(500).json({ message: "Server error", error: err.message });
+    res.status(500).json({ message: "Unable to sign in right now. Please try again." });
   }
 };
 
@@ -86,7 +86,7 @@ exports.getUsers = async (req, res) => {
     res.json(users);
   } catch (err) {
     console.error("Unable to fetch admin user list:", err.message);
-    res.status(500).json({ message: "Server error", error: err.message });
+    res.status(500).json({ message: "Unable to load users right now." });
   }
 };
 
