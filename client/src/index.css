@@ -24,14 +24,14 @@ button, input, select, textarea { font: inherit; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 h1, h2, h3, h4, h5, p { margin-top: 0; }
-h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
+h1, h2 { font-family: 'Cormorant Garamond', Georgia, serif; }
 ::selection { background: #d9c39a; color: #24251f; }
 
 .hotel-site { color: var(--ink); background: var(--cream); overflow: hidden; }
 .hotel-nav { min-height: 84px; padding: 0 clamp(20px, 6vw, 92px); display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #fbfaf6; position: relative; z-index: 5; }
 .hotel-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-size: 23px; font-weight: 700; letter-spacing: -1.2px; line-height: 1; }
 .hotel-brand:hover { color: var(--ink); }
-.brand-mark { display: grid; place-items: center; width: 40px; height: 40px; background: var(--green); color: #f9f4e8; font-family: 'Playfair Display', Georgia, serif; font-size: 25px; font-weight: 500; border-radius: 50% 50% 50% 8px; }
+.brand-mark { display: grid; place-items: center; width: 40px; height: 40px; background: var(--green); color: #f9f4e8; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 25px; font-weight: 500; border-radius: 50% 50% 50% 8px; }
 .brand-light { color: #a18a61; font-weight: 500; }
 .hotel-brand small { display: block; font-size: 8px; letter-spacing: 2px; font-weight: 600; margin-top: 6px; color: #85847b; }
 .hotel-nav-links, .hotel-nav-actions { display: flex; align-items: center; gap: 28px; }
@@ -61,8 +61,8 @@ h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
 .hero-text-link:hover { color: #e2c894; }
 .hero-caption { position: absolute; left: clamp(24px, 9vw, 138px); bottom: 25px; display: flex; gap: 24px; color: #d7d7ce; font-size: 8px; letter-spacing: 1.6px; }
 .quote-card { position: absolute; z-index: 2; right: clamp(22px, 7vw, 105px); bottom: 54px; width: min(290px, 31%); padding: 25px 26px 20px; background: rgba(250,248,241,.96); box-shadow: 0 18px 55px #1114; color: #2d342d; }
-.quote-mark { font-family: 'Playfair Display', Georgia, serif; font-size: 48px; color: #b49a68; line-height: .7; display: block; }
-.quote-card p { font-family: 'Playfair Display', Georgia, serif; font-size: 23px; line-height: 1.25; margin: 8px 0 12px; }
+.quote-mark { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 48px; color: #b49a68; line-height: .7; display: block; }
+.quote-card p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 23px; line-height: 1.25; margin: 8px 0 12px; }
 .quote-italic p { font-style: italic; }
 .quote-minimal p { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: -.4px; }
 .quote-card small { color: #838277; font-size: 9px; letter-spacing: .6px; }
@@ -72,7 +72,7 @@ h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
 .trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); padding: 26px clamp(24px, 9vw, 138px); background: #f0ede5; border-bottom: 1px solid #e6e0d5; }
 .trust-strip > div { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 5px 12px; border-right: 1px solid #dcd6c9; }
 .trust-strip > div:last-child { border-right: 0; }
-.trust-strip strong { font-family: 'Playfair Display', Georgia, serif; font-size: 18px; font-weight: 500; color: #a48d61; }
+.trust-strip strong { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 500; color: #a48d61; }
 .trust-strip span { font-size: 10px; color: #55584f; font-weight: 600; }
 .section-wrap { padding: 100px clamp(24px, 9vw, 138px); }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px; }
@@ -92,7 +92,7 @@ h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
 .room-type-row { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
 .room-type { color: #9c875e; font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
 .room-rating { color: #8b887c; font-size: 8px; }
-.room-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 25px; font-weight: 500; margin: 12px 0 8px; }
+.room-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 25px; font-weight: 500; margin: 12px 0 8px; }
 .room-card p { min-height: 40px; color: #77786f; font-size: 11px; line-height: 1.7; margin-bottom: 17px; }
 .room-card-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #ebe6dc; padding-top: 14px; }
 .room-card-bottom strong { font-size: 18px; color: #293d31; }
@@ -105,7 +105,7 @@ h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
 .experience-image > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .image-note { position: absolute; left: 30px; bottom: 30px; display: flex; flex-direction: column; gap: 9px; background: #fbf8f0ef; padding: 20px 24px; }
 .image-note span { color: #9c875e; font-size: 8px; font-weight: 700; letter-spacing: 1.8px; }
-.image-note strong { font-family: 'Playfair Display', Georgia, serif; font-size: 23px; font-weight: 500; }
+.image-note strong { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 23px; font-weight: 500; }
 .experience-copy { padding: 85px clamp(28px, 7vw, 100px); align-self: center; }
 .experience-copy h2 { margin-bottom: 20px; }
 .experience-lead { color: #74756d; font-size: 12px; line-height: 1.9; max-width: 390px; margin-bottom: 28px; }
@@ -116,7 +116,7 @@ h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
 .experience-item p { font-size: 10px; line-height: 1.7; color: #77786f; margin: 0; }
 .quote-banner { position: relative; overflow: hidden; padding: 85px 24px 90px; text-align: center; background: #34483d; color: #fffdf7; }
 .quote-banner-flower { position: absolute; top: -55px; right: 8%; font-size: 200px; line-height: 1; color: #ffffff08; }
-.quote-banner blockquote { position: relative; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.35; margin: 20px 0 28px; }
+.quote-banner blockquote { position: relative; font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.35; margin: 20px 0 28px; }
 .quote-banner blockquote em { color: #d9c08d; font-weight: 500; }
 .hotel-footer { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; padding: 34px clamp(24px, 9vw, 138px) 22px; background: #fbfaf6; }
 .footer-brand { justify-self: start; }
@@ -141,7 +141,7 @@ h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
 .customer-room-card { overflow: hidden; background: #fffefa; border: 1px solid #e8e2d7; }
 .customer-room-card img { width: 100%; height: 220px; object-fit: cover; background: #e9e3d8; }
 .customer-room-body { padding: 18px; }
-.customer-room-body h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 500; margin: 8px 0; text-transform: capitalize; }
+.customer-room-body h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 500; margin: 8px 0; text-transform: capitalize; }
 .customer-room-body p { font-size: 11px; line-height: 1.7; color: #74766d; min-height: 38px; }
 .customer-room-price { font-size: 19px; font-weight: 700; color: #34483d; margin: 14px 0; }
 .customer-room-price span { font-size: 10px; font-weight: 400; color: #7b7b72; }
@@ -164,7 +164,7 @@ h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
 .auth-visual-copy { padding: 45px 0; }
 .auth-visual-copy h1 { font-size: clamp(42px, 5vw, 68px); line-height: 1.08; font-weight: 500; letter-spacing: -1.5px; margin: 20px 0; }
 .auth-visual-copy h1 em { color: #d9c08d; font-weight: 500; }
-.auth-visual-copy p { max-width: 330px; color: #e5e5dc; font-family: 'Playfair Display', Georgia, serif; font-size: 18px; font-style: italic; line-height: 1.6; }
+.auth-visual-copy p { max-width: 330px; color: #e5e5dc; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-style: italic; line-height: 1.6; }
 .auth-visual-caption { color: #d7d8cf; font-size: 8px; letter-spacing: 1.7px; }
 .auth-form-side { display: flex; flex-direction: column; padding: 30px clamp(24px, 5vw, 80px); }
 .auth-back { align-self: flex-end; color: #77786f; text-decoration: none; font-size: 11px; }
@@ -264,7 +264,7 @@ h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
 .booking-card-image { min-height: 245px; background: #e9e3d8; }
 .booking-card-image img { width: 100%; height: 100%; object-fit: cover; }
 .booking-card-details { padding: 23px 26px; min-width: 0; }
-.booking-card-details h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 27px; font-weight: 500; margin: 7px 0 20px; }
+.booking-card-details h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 27px; font-weight: 500; margin: 7px 0 20px; }
 .booking-dates { display: flex; align-items: center; gap: 22px; padding-bottom: 19px; border-bottom: 1px solid #ebe6dc; }
 .booking-dates div, .booking-card-bottom > div { display: flex; flex-direction: column; gap: 6px; }
 .booking-dates small, .booking-card-bottom small { color: #858477; font-size: 8px; font-weight: 700; letter-spacing: 1.2px; }
