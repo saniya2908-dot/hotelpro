@@ -83,23 +83,23 @@ function UserHome() {
     <main className="customer-page">
       <UserNavbar />
       <header className="customer-top">
-        <span className="eyebrow eyebrow-light"><span className="eyebrow-line" /> YOUR NEXT CHAPTER STARTS HERE</span>
-        <h1>Find your kind of comfort{user?.name ? `, ${user.name.split(" ")[0]}` : ""}.</h1>
-        <p>Pick your dates, explore the rooms and make your next stay yours.</p>
+        <span className="eyebrow eyebrow-light"><span className="eyebrow-line" /> YOUR LITTLE ESCAPE STARTS HERE</span>
+        <h1>Find your own kind of lovely{user?.name ? `, ${user.name.split(" ")[0]}` : ""}.</h1>
+        <p>Choose your dates, discover a room you adore, and make a little space just for yourself.</p>
       </header>
 
       <div className="customer-content">
         <section className="booking-search-panel" aria-label="Choose stay dates">
           <div className="date-field">
-            <label htmlFor="checkin-date">CHECK-IN</label>
+            <label htmlFor="checkin-date">ARRIVING</label>
             <input id="checkin-date" type="date" min={today} value={fromdate} onChange={(e) => setFromdate(e.target.value)} />
           </div>
           <div className="date-field">
-            <label htmlFor="checkout-date">CHECK-OUT</label>
+            <label htmlFor="checkout-date">DEPARTING</label>
             <input id="checkout-date" type="date" min={fromdate || today} value={todate} onChange={(e) => setTodate(e.target.value)} />
           </div>
           <div className="date-field">
-            <label htmlFor="room-type">ROOM STYLE</label>
+            <label htmlFor="room-type">YOUR ROOM STYLE</label>
             <select id="room-type" className="form-select" value={roomType} onChange={(e) => setRoomType(e.target.value)} style={{ borderRadius: 0, padding: "11px 12px", fontSize: 12 }}>
               <option value="all">All rooms</option>
               <option value="single">Single</option>
@@ -112,8 +112,8 @@ function UserHome() {
         {message.text && <div className={`alert alert-${message.type} mt-3`} role="status">{message.text}</div>}
 
         <section className="customer-section-heading">
-          <div><h2>Explore rooms</h2><p>{visibleRooms.length} {visibleRooms.length === 1 ? "option" : "options"} to explore · Prices shown per night · Availability is confirmed when you book</p></div>
-          <span className="eyebrow">COMFORT, CONSIDERED</span>
+          <div><h2>Find your favourite room</h2><p>{visibleRooms.length} {visibleRooms.length === 1 ? "option" : "options"} to explore · Prices shown per night · Availability is confirmed when you book</p></div>
+          <span className="eyebrow">THOUGHTFUL STAYS, ALWAYS</span>
         </section>
 
         {visibleRooms.length ? (
@@ -131,7 +131,7 @@ function UserHome() {
                   <h3>{room.name || (room.type === "suite" ? "The Suite" : room.type === "double" ? "The Double" : "The Essential")}</h3>
                   <p>{room.description}</p>
                   <div className="customer-room-price">₹{Number(room.rent).toLocaleString("en-IN")} <span>/ night</span></div>
-              <button className="customer-book-button" onClick={() => openBooking(room)}>Choose this room <span aria-hidden="true">↗</span></button>
+              <button className="customer-book-button" onClick={() => openBooking(room)}>Make it yours <span aria-hidden="true">↗</span></button>
                 </div>
               </article>
             ))}
@@ -141,7 +141,7 @@ function UserHome() {
         )}
 
         <section className="quote-banner" style={{ marginTop: 54, padding: "52px 24px" }} aria-live="polite">
-          <span className="eyebrow eyebrow-light">A LITTLE TRAVEL THOUGHT</span>
+          <span className="eyebrow eyebrow-light">A LITTLE REMINDER TO SLOW DOWN</span>
           <blockquote style={{ fontSize: "clamp(25px, 3vw, 36px)", margin: "17px 0 0" }}>“{guestQuotes[quoteIndex]}”</blockquote>
           <div className="quote-dots" style={{ justifyContent: "center" }}>{guestQuotes.map((quote, i) => <button key={quote} aria-label={`Show thought ${i + 1}`} className={i === quoteIndex ? "active" : ""} onClick={() => setQuoteIndex(i)} />)}</div>
         </section>
