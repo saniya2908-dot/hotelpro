@@ -18,9 +18,9 @@ const roomImages = {
 };
 
 const experiences = [
-  { icon: "✦", title: "Thoughtfully chosen stays", copy: "Comfort-first rooms for quick getaways, work trips and longer escapes." },
-  { icon: "⌁", title: "A simpler way to book", copy: "Choose your dates, explore your options and reserve in just a few steps." },
-  { icon: "♡", title: "The details matter", copy: "Clear nightly pricing and the essentials you need before you arrive." },
+  { icon: "✦", title: "Spaces with a softer touch", copy: "Warm, welcoming rooms made for slow mornings, peaceful evenings and everything in between." },
+  { icon: "⌁", title: "A little ease, all the way", copy: "Choose your dates, find your favourite room and let the details fall into place." },
+  { icon: "♡", title: "The little things count", copy: "Transparent prices and thoughtful essentials, so you can look forward to your stay with ease." },
 ];
 
 function Home() {
@@ -56,14 +56,14 @@ function Home() {
         <div className="hero-photo" />
         <div className="hero-shade" />
         <div className="hero-content">
-          <span className="eyebrow eyebrow-light"><span className="eyebrow-line" /> A BETTER WAY TO GET AWAY</span>
-          <h1>Stay somewhere<br /><em>that feels like you.</em></h1>
-          <p>Beautiful spaces. Thoughtful comfort. A smoother journey from check-in to check-out.</p>
+          <span className="eyebrow eyebrow-light"><span className="eyebrow-line" /> YOUR LITTLE ESCAPE AWAITS</span>
+          <h1>Find a little<br /><em>somewhere lovely.</em></h1>
+          <p>Soft details, soulful spaces, and thoughtful comforts—your own little pause from the everyday.</p>
           <div className="hero-actions">
-            <Link className="button button-gold" to="/signup">Explore stays <span>↗</span></Link>
+            <Link className="button button-gold" to="/signup">Find your retreat <span>↗</span></Link>
             <Link className="hero-text-link" to="/login">Already have an account? <u>Sign in</u></Link>
           </div>
-          <div className="hero-caption"><span>01 / 04</span><span>YOUR SPACE TO UNWIND</span><span>✳</span></div>
+          <div className="hero-caption"><span>01 / 04</span><span>A MOMENT JUST FOR YOU</span><span>✳</span></div>
         </div>
         <aside className={`quote-card quote-${quotes[quoteIndex].style}`} aria-live="polite">
           <span className="quote-mark">“</span>
@@ -74,18 +74,18 @@ function Home() {
       </section>
 
       <section className="trust-strip" aria-label="HotelPro benefits">
-        <div><strong>01</strong><span>Easy online booking</span></div>
-        <div><strong>02</strong><span>Comfort-led spaces</span></div>
-        <div><strong>03</strong><span>Clear nightly rates</span></div>
-        <div><strong>04</strong><span>Your stay, your way</span></div>
+        <div><strong>01</strong><span>Effortless reservations</span></div>
+        <div><strong>02</strong><span>Beautifully restful rooms</span></div>
+        <div><strong>03</strong><span>Thoughtful, clear pricing</span></div>
+        <div><strong>04</strong><span>A stay that feels yours</span></div>
       </section>
 
       <section className="section-wrap rooms-section" id="rooms">
         <div className="section-heading">
-          <div><span className="eyebrow"><span className="eyebrow-line" /> FIND YOUR FIT</span><h2>A room for <em>every kind of trip.</em></h2></div>
-          <Link className="underlined-link" to="/signup">See stays & book <span>↗</span></Link>
+          <div><span className="eyebrow"><span className="eyebrow-line" /> FIND YOUR FAVOURITE</span><h2>A little room to <em>fall in love with.</em></h2></div>
+          <Link className="underlined-link" to="/signup">Explore the collection <span>↗</span></Link>
         </div>
-        <p className="section-intro">From a restful night between meetings to a little extra space to celebrate, find the stay that suits your plans.</p>
+        <p className="section-intro">From a quiet weekend away to a special celebration, discover a space that matches your mood and makes every moment feel considered.</p>
         <div className="room-grid">
           {(rooms.length ? rooms.slice(0, 6) : [
             { _id: "single-preview", type: "single", roomNumber: "01", description: "A calm, comfortable space to recharge.", rent: 1500 },
@@ -112,26 +112,26 @@ function Home() {
       <section className="experience-section" id="experience">
         <div className="experience-image"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Warm, thoughtfully designed hotel room" loading="lazy" /><div className="image-note"><span>THE HOTELPRO FEEL</span><strong>Space to slow down.</strong></div></div>
         <div className="experience-copy">
-          <span className="eyebrow"><span className="eyebrow-line" /> THE LITTLE THINGS</span>
-          <h2>Travel well.<br /><em>Feel at home.</em></h2>
-          <p className="experience-lead">A great stay is more than a place to sleep. It is the ease of knowing the details are taken care of.</p>
+          <span className="eyebrow"><span className="eyebrow-line" /> MADE FOR YOUR MOMENTS</span>
+          <h2>Stay awhile.<br /><em>Feel wonderful.</em></h2>
+          <p className="experience-lead">The loveliest stays are made of little things: a calming room, a slower morning and the feeling that you can simply be.</p>
           <div className="experience-list">{experiences.map((item) => <div className="experience-item" key={item.title}><span className="experience-icon">{item.icon}</span><div><h3>{item.title}</h3><p>{item.copy}</p></div></div>)}</div>
-          <Link className="underlined-link" to="/signup">Make your next stay count <span>↗</span></Link>
+          <Link className="underlined-link" to="/signup">Find your kind of lovely <span>↗</span></Link>
         </div>
       </section>
 
       <section className="quote-banner">
         <span className="quote-banner-flower">✳</span>
-        <span className="eyebrow eyebrow-light">A NOTE TO THE TRAVELLER</span>
-        <blockquote>“Collect moments, not just miles.<br /><em>We’ll help with the place to stay.</em>”</blockquote>
-        <Link className="button button-gold" to="/signup">Your next stay starts here <span>↗</span></Link>
+        <span className="eyebrow eyebrow-light">A LITTLE NOTE FOR YOU</span>
+        <blockquote>“Make space for softer mornings.<br /><em>Let your next chapter begin somewhere beautiful.</em>”</blockquote>
+        <Link className="button button-gold" to="/signup">Your escape begins here <span>↗</span></Link>
       </section>
 
       <footer className="hotel-footer">
         <Link className="hotel-brand footer-brand" to="/"><span className="brand-mark">H</span><span>hotel<span className="brand-light">pro</span><small>STAYS, MADE SPECIAL</small></span></Link>
-        <p>Make room for a better stay.</p>
+        <p>A softer place to land.</p>
         <div><Link to="/login">Sign in</Link><Link to="/signup">Create account</Link><a href="#rooms">Explore rooms</a></div>
-        <small>© {CURRENT_YEAR} HotelPro. Made for the way you travel.</small>
+        <small>© {CURRENT_YEAR} HotelPro. Thoughtfully made for your next getaway.</small>
       </footer>
     </main>
   );
