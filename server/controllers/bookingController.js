@@ -79,7 +79,8 @@ exports.getMyBookings = async (req, res) => {
     const bookings = await Booking.find({ user: req.user.id }).populate("room", "roomNumber name description photos type rent count");
     res.json(bookings);
   } catch (err) {
-    res.status(500).json({ message: "Server error", error: err.message });
+    console.error("Get my bookings error:", err.message);
+    res.status(500).json({ message: "Unable to load bookings right now." });
   }
 };
 
@@ -110,7 +111,8 @@ exports.cancelBooking = async (req, res) => {
 
     res.json({ message: "Booking cancelled", booking });
   } catch (err) {
-    res.status(500).json({ message: "Server error", error: err.message });
+    console.error("Cancel booking error:", err.message);
+    res.status(500).json({ message: "Unable to cancel this booking right now." });
   }
 };
 
@@ -120,6 +122,7 @@ exports.getAllBookings = async (req, res) => {
     const bookings = await Booking.find().populate("room").populate("user", "name email phone");
     res.json(bookings);
   } catch (err) {
-    res.status(500).json({ message: "Server error", error: err.message });
+    console.error("Get all bookings error:", err.message);
+    res.status(500).json({ message: "Unable to load bookings right now." });
   }
 };
