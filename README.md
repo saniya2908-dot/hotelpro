@@ -1,6 +1,23 @@
 # HotelPro
 
-HotelPro is a rich, image-led hotel booking demo with guest registration, room browsing, reservations, and an admin console. The selected version is the `main` branch. The former `classic` branch has been deleted.
+> **Live demo:** https://hotelpro-21bl.onrender.com
+
+HotelPro is an image-led hotel booking and management web application for browsing rooms, registering as a guest, making reservations, and managing room inventory through a separate administrator console.
+
+## Project links
+
+- **Live website:** https://hotelpro-21bl.onrender.com
+- **Admin sign-in:** https://hotelpro-21bl.onrender.com/admin-login
+- **GitHub repository:** https://github.com/saniya2908-dot/hotelpro
+
+## Features
+
+- Hotel homepage with room photography and descriptive content
+- Guest registration and sign-in
+- Room browsing and reservation workflows
+- Separate administrator sign-in and role-protected management routes
+- Admin tools for adding and removing room listings
+- MongoDB-backed room and booking data
 
 ## Run locally
 
@@ -10,7 +27,7 @@ HotelPro is a rich, image-led hotel booking demo with guest registration, room b
 4. In `server`, run `npm ci` then `npm start`.
 5. In `client`, run `npm ci`, set `VITE_API_URL=http://localhost:8001/api` in a local `.env`, then run `npm run dev`.
 
-The server adds the starter inventory only when those room numbers are missing. Public registration always creates a customer account. To designate an administrator, first register that account, then change its `type` field to `admin` directly in the trusted MongoDB database; there is intentionally no public role-selection or admin-creation endpoint.
+The server adds the starter inventory only when those room numbers are missing. Public registration always creates a customer account. Administrator credentials must be configured using server-side environment variables; never commit secrets to the repository.
 
 ## Payments
 
