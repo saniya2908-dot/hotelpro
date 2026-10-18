@@ -665,3 +665,9 @@ h2 .fall-in-love-highlight strong {
   color: #9f456b !important;
   -webkit-text-stroke: .25px currentColor;
 }
+
+
+/* Increase visibility of the highlight underline without changing the text */
+.fall-in-love-highlight {
+  background: linear-gradient(transparent 58%, #c94f80 58%, #c94f80 91%, transparent 91%) !important;
+}
