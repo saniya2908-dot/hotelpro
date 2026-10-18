@@ -415,3 +415,122 @@ body, .hotel-site, .customer-page, .auth-page {
 .booking-cancel { border-color: #d2b4a7; color: #89574d; }
 .booking-cancel:hover { background: #f2dfd8; }
 ::selection { background: #c7a18a; color: #39271f; }
+
+
+/* Rosewater & ballet-pink visual identity */
+:root {
+  color: #513843;
+  background: #fbf0f2;
+  --ink: #513843;
+  --muted: #8c707d;
+  --cream: #fbf0f2;
+  --paper: #fff9fa;
+  --gold: #c98ca2;
+  --line: #ead2db;
+  --green: #8e536b;
+}
+body, .hotel-site, .customer-page { background: #fbf0f2 !important; color: #513843 !important; }
+.hotel-nav { background: #fff8fa !important; border-bottom: 1px solid #f0dce3; }
+.hotel-brand, .hotel-nav-links a, .nav-login { color: #654653 !important; }
+.brand-mark { background: #8e536b !important; color: #fff6f8 !important; border-radius: 50%; }
+.brand-light { color: #c17d98 !important; }
+.hotel-brand small { color: #a48591 !important; }
+.hotel-nav-links a:hover, .nav-login:hover, .underlined-link:hover { color: #b65f82 !important; }
+.button-dark, .customer-book-button, .admin-container form .btn-primary { background: #8e536b !important; color: #fff8fa !important; }
+.button-dark:hover, .customer-book-button:hover, .admin-container form .btn-primary:hover { background: #713e53 !important; }
+.button-gold { background: #f0c7d5 !important; color: #633b4c !important; border-color: #f0c7d5 !important; }
+.button-gold:hover { background: #f6dce5 !important; }
+.button-outline { border-color: #d8aabb !important; color: #75475a !important; }
+.button-outline:hover { background: #8e536b !important; color: #fff8fa !important; }
+.hero-luxe { background: #6c4356 !important; }
+.hero-photo { background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=85') !important; background-position: center 52%; }
+.hero-shade { background: linear-gradient(90deg, rgba(57,34,47,.82) 0%, rgba(73,42,58,.57) 42%, rgba(73,42,58,.04) 100%), linear-gradient(0deg, rgba(55,31,43,.32), transparent 38%) !important; }
+.eyebrow-line { background: #df9eb7 !important; }
+.eyebrow-light { color: #f7dce6 !important; }
+.hero-content h1 em, .section-heading h2 em, .experience-copy h2 em { color: #f0b9ce !important; }
+.hero-text-link:hover { color: #f0b9ce !important; }
+.quote-card { background: rgba(255,247,250,.97) !important; color: #513843 !important; border: 1px solid #f0dce3; border-radius: 18px 18px 18px 4px; box-shadow: 0 22px 60px #4c26351f !important; }
+.quote-mark, .trust-strip strong, .room-type, .experience-icon, .booking-empty-icon { color: #b86e8b !important; }
+.quote-dots button.active { background: #c47f9b !important; }
+.trust-strip { background: #f4dfe7 !important; border-color: #ebcbd8 !important; }
+.trust-strip > div { border-color: #e6c4d1 !important; }
+.trust-strip span { color: #765664 !important; }
+.section-wrap { background: #fbf0f2; }
+.section-intro, .room-card p, .experience-lead, .experience-item p, .customer-section-heading p, .customer-room-body p, .booking-empty-panel p { color: #8c707d !important; }
+.underlined-link { color: #8e536b !important; border-color: #d9aebe !important; }
+.room-card, .customer-room-card, .booking-card, .booking-search-panel, .quote-card, .admin-table-panel, .admin-container form, .customer-empty, .booking-empty-panel {
+  background: #fff9fa !important;
+  border-color: #efd9e1 !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+}
+.room-card { box-shadow: 0 9px 28px #8e536b0b !important; }
+.room-card:hover { box-shadow: 0 18px 40px #8e536b20 !important; }
+.room-image-wrap { background: #f2dfe6 !important; }
+.room-number, .image-note { background: #fff4f7ed !important; color: #70485a !important; border: 1px solid #f0d8e1; border-radius: 999px; }
+.room-card-bottom, .experience-list, .experience-item, .hotel-footer > div, .auth-small-note, .booking-dates { border-color: #efd9e1 !important; }
+.room-card-bottom strong, .customer-room-price, .booking-card-bottom > div strong { color: #8e536b !important; }
+.room-card-bottom a { border-color: #e5bdcb !important; border-radius: 50%; color: #8e536b; }
+.room-card-bottom a:hover { background: #8e536b !important; color: white !important; }
+.experience-section { background: #f5e0e8 !important; }
+.experience-copy { background: #f5e0e8 !important; }
+.experience-icon { border-color: #dfb4c4 !important; background: #fff5f8; }
+.quote-banner { background: linear-gradient(125deg, #8e536b, #ad6d88) !important; }
+.quote-banner blockquote em { color: #f6cddb !important; }
+.quote-banner-flower { color: #ffffff12 !important; }
+.hotel-footer { background: #f7e6ec !important; }
+.hotel-footer > p, .hotel-footer > div a, .hotel-footer > small { color: #8c707d !important; }
+.customer-top { background: linear-gradient(120deg, #8e536b, #b97894) !important; }
+.customer-top .eyebrow-line { background: #f6cfdd !important; }
+.customer-content { background: #fbf0f2 !important; }
+.booking-search-panel input, .booking-search-panel select, .auth-input, .admin-container form .form-control, .admin-container form .form-select {
+  background: #fff8fa !important;
+  border-color: #e7cbd6 !important;
+  color: #513843 !important;
+  border-radius: 10px !important;
+}
+.booking-search-panel label, .auth-form-wrap form label { color: #795564 !important; }
+.auth-visual { background: #8e536b !important; }
+.auth-visual::before {
+  background: linear-gradient(180deg, rgba(67,39,53,.48), rgba(67,39,53,.28) 35%, rgba(67,39,53,.82)), url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85') center / cover !important;
+}
+.auth-brand .brand-mark { background: #fff4f7 !important; color: #8e536b !important; }
+.auth-brand .brand-light { color: #f0b9ce !important; }
+.auth-back, .auth-switch, .auth-small-note { color: #8c707d !important; }
+.auth-switch a { color: #8e536b !important; }
+.auth-input:focus, .admin-container form .form-control:focus, .admin-container form .form-select:focus { border-color: #c47f9b !important; box-shadow: 0 0 0 3px #c47f9b22 !important; }
+.admin-tabs { border-color: #ead2db !important; }
+.admin-tabs .nav-link.active { background: #fff0f5 !important; color: #8e536b !important; border-color: #efd9e1 !important; }
+.admin-table-panel .table { color: #654653 !important; }
+.admin-table-panel thead th, .booking-dates small, .booking-card-bottom small { color: #a48591 !important; }
+.booking-status.status-booked { color: #4e735e; background: #e4f0e7; }
+.booking-status.status-cancelled { color: #96546e; background: #f9e3eb; }
+.booking-cancel { border-color: #e3bccb !important; color: #96546e !important; border-radius: 8px; }
+.booking-cancel:hover { background: #f9e3eb !important; }
+::selection { background: #efc3d3; color: #513843; }
+
+/* New editorial "choose your moment" cards */
+.moment-section { padding: 86px clamp(24px, 9vw, 138px) 96px; background: #fff7f9; }
+.moment-heading { max-width: 720px; margin: 0 auto 34px; text-align: center; }
+.moment-heading .eyebrow { justify-content: center; }
+.moment-heading h2 { color: #513843; font-size: clamp(35px, 4vw, 51px); line-height: 1.1; font-weight: 500; margin: 16px 0 12px; }
+.moment-heading h2 em { color: #b86e8b; font-weight: 500; }
+.moment-heading p { max-width: 500px; margin: 0 auto; color: #8c707d; font-size: 12px; line-height: 1.9; }
+.moment-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.moment-card { position: relative; min-height: 280px; overflow: hidden; border-radius: 18px 18px 70px 18px; background: #f0d9e2; isolation: isolate; }
+.moment-card::after { content: ""; position: absolute; inset: 25% 0 0; z-index: -1; background: linear-gradient(0deg, rgba(58,33,46,.82), rgba(58,33,46,0)); }
+.moment-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .6s ease; }
+.moment-card:hover img { transform: scale(1.06); }
+.moment-number { position: absolute; top: 17px; left: 17px; width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid #fff9; border-radius: 50%; color: white; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; background: #6c435655; backdrop-filter: blur(6px); }
+.moment-card-copy { position: absolute; left: 23px; right: 23px; bottom: 24px; color: #fff8fa; }
+.moment-card-copy span { display: block; font-size: 8px; letter-spacing: 1.8px; font-weight: 800; color: #f4c8d8; margin-bottom: 8px; }
+.moment-card-copy h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 29px; font-weight: 500; margin: 0 0 5px; }
+.moment-card-copy p { font-size: 10px; line-height: 1.7; color: #f9eaf0; margin: 0; max-width: 260px; }
+.moment-note { display: flex; justify-content: center; align-items: center; gap: 10px; color: #9b7182; font-size: 10px; letter-spacing: .5px; margin-top: 28px; }
+.moment-note span { color: #c47f9b; font-size: 15px; }
+@media (max-width: 760px) {
+  .moment-section { padding: 60px 22px 68px; }
+  .moment-grid { grid-template-columns: 1fr; gap: 15px; }
+  .moment-card { min-height: 250px; border-radius: 16px 16px 54px 16px; }
+  .moment-card-copy h3 { font-size: 27px; }
+}
