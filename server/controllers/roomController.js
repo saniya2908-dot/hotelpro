@@ -65,3 +65,29 @@ exports.getRooms = async (req, res) => {
     res.status(500).json({ message: "Could not load rooms right now." });
   }
 };
+
+
+// Delete a room only when it has no bookings still marked as booked.
+exports.deleteRoom = async (req, res) => {
+  try {
+    const mongoose = require("mongoose");
+    const Booking = require("../models/Booking");
+    const { roomId } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(roomId)) {
+      return res.status(400).json({ message: "Invalid room ID." });
+    }
+    const room = await Room.findById(roomId).select("_id roomNumber");
+    if (!room) return res.status(404).json({ message: "Room not found." });
+
+    const activeBooking = await Booking.exists({ room: room._id, status: "booked" });
+    if (activeBooking) {
+      return res.status(409).json({ message: "This room has bookings marked as active. Cancel or resolve those bookings before removing the room." });
+    }
+
+    await Room.deleteOne({ _id: room._id });
+    return res.json({ message: `Room ${room.roomNumber} removed successfully.`, roomId: String(room._id) });
+  } catch (err) {
+    console.error("Delete room error:", err.message);
+    return res.status(500).json({ message: "Could not remove the room right now." });
+  }
+};
