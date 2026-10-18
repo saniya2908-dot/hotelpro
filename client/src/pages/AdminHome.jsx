@@ -41,6 +41,19 @@ function AdminHome() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const deleteRoom = async (room) => {
+    const confirmed = window.confirm(`Remove room ${room.roomNumber} from HotelPro? This cannot be undone.`);
+    if (!confirmed) return;
+    setMessage({ text: "", type: "" });
+    try {
+      await api.delete(`/rooms/${room._id}`);
+      setMessage({ text: `Room ${room.roomNumber} removed successfully.`, type: "success" });
+      loadAll();
+    } catch (err) {
+      setMessage({ text: err.response?.data?.message || "Could not remove this room.", type: "danger" });
+    }
+  };
+
   const addRoom = async (e) => {
     e.preventDefault();
     setMessage({ text: "", type: "" });
@@ -144,6 +157,8 @@ function AdminHome() {
         )}
 
         {tab === "rooms" && (
+          <>
+          {message.text && <div className={`alert alert-${message.type}`} role="alert">{message.text}</div>}
           <div className="table-responsive admin-table-panel">
             <table className="table table-striped">
               <thead>
@@ -154,6 +169,7 @@ function AdminHome() {
                   <th>Description</th>
                   <th>Rent</th>
                   <th>Units</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -165,11 +181,13 @@ function AdminHome() {
                     <td>{r.description}</td>
                     <td>Rs {r.rent}</td>
                     <td>{r.count}</td>
+                    <td><button type="button" className="admin-remove-room" onClick={() => deleteRoom(r)}>Remove</button></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          </>
         )}
 
         {tab === "add" && (
