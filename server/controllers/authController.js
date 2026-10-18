@@ -3,6 +3,40 @@ const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
 const User = require("../models/User");
 
+// Dedicated administrator sign-in. Credentials must be configured as server-side environment variables.
+// Never place the admin password in frontend code or the public repository.
+exports.adminLogin = async (req, res) => {
+  try {
+    const email = typeof req.body?.email === "string" ? req.body.email.trim().toLowerCase() : "";
+    const password = typeof req.body?.password === "string" ? req.body.password : "";
+    const configuredEmail = String(process.env.ADMIN_EMAIL || "").trim().toLowerCase();
+    const configuredPassword = process.env.ADMIN_PASSWORD;
+
+    if (!configuredEmail || !configuredPassword) {
+      return res.status(503).json({ message: "Admin sign-in is not configured on the server." });
+    }
+    if (!process.env.JWT_SECRET || process.env.JWT_SECRET.length < 32) {
+      return res.status(503).json({ message: "Authentication is not configured on this server." });
+    }
+    if (!email || !password || email !== configuredEmail || password !== configuredPassword) {
+      return res.status(401).json({ message: "Invalid administrator email or password." });
+    }
+
+    const token = jwt.sign(
+      { id: `admin:${configuredEmail}`, type: "admin" },
+      process.env.JWT_SECRET,
+      { expiresIn: "8h" }
+    );
+    return res.json({
+      token,
+      user: { id: `admin:${configuredEmail}`, name: "Administrator", email: configuredEmail, type: "admin" },
+    });
+  } catch (err) {
+    console.error("Admin login failed:", err.message);
+    return res.status(500).json({ message: "Unable to sign in as administrator right now." });
+  }
+};
+
 // Public signups always create customer accounts; role escalation is not allowed.
 exports.signup = async (req, res) => {
   try {
