@@ -581,3 +581,59 @@ html, body, #root,
 .customer-content, .auth-form-side, .experience-section {
   color: #513843;
 }
+
+
+/* Typography highlight pass: stronger contrast against coffee-nude and rose-pink */
+:root {
+  --type-ink: #402632;
+  --type-muted: #765564;
+  --type-rose: #a84f73;
+  --type-rose-light: #c46d91;
+}
+body, .hotel-site, .customer-page, .customer-content {
+  color: var(--type-ink);
+}
+h1, h2, h3, h4, h5, h6,
+.hero-title, .section-title, .page-title,
+.moment-heading h2, .experience-copy h2 {
+  color: var(--type-ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+h1, .hero-title, .page-title {
+  text-shadow: 0 1px 0 rgba(255,255,255,.28);
+}
+h1 em, h2 em, h3 em,
+.hero-title em, .section-title em,
+.moment-heading h2 em, .experience-copy h2 em {
+  color: var(--type-rose) !important;
+  font-style: italic;
+  font-weight: 600;
+}
+p, .hotel-site p, .customer-page p,
+.room-description, .booking-card p {
+  color: var(--type-muted);
+}
+.eyebrow, .eyebrow-line, .section-eyebrow,
+.moment-heading .eyebrow, .experience-copy .eyebrow {
+  color: var(--type-rose) !important;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+.hotel-nav a, .hotel-nav button,
+.hotel-footer a, .customer-page a {
+  transition: color .2s ease;
+}
+.hotel-nav a:hover, .hotel-footer a:hover,
+.customer-page a:hover {
+  color: var(--type-rose) !important;
+}
+button, .btn, .primary-button, .hotel-button {
+  font-weight: 700;
+}
+.moment-card-copy h3 { color: #fff8fa !important; font-weight: 600; }
+.moment-card-copy p { color: #fff1f6 !important; }
+.moment-card-copy span { color: #ffd4e3 !important; }
+::selection { background: #d995b0; color: #402632; }
