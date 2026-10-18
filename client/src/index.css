@@ -641,6 +641,7 @@ button, .btn, .primary-button, .hotel-button {
 
 /* Distinct highlight for the rooms-section phrase */
 .fall-in-love-highlight {
+  font-weight: 700 !important;
   color: #9f456b !important;
   background: linear-gradient(transparent 58%, #efc2d3 58%, #efc2d3 91%, transparent 91%);
   padding: 0 .08em .03em;
