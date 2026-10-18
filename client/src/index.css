@@ -680,3 +680,77 @@ h2 .fall-in-love-highlight strong {
 .admin-remove-room { border: 1px solid #d6a0b5; color: #934562; background: #fff4f7; border-radius: 8px; padding: 7px 11px; font-size: 11px; font-weight: 700; white-space: nowrap; }
 .admin-remove-room:hover { background: #f8dce6; border-color: #bd6d8d; }
 .admin-login-page .auth-form-side { min-width: 0; }
+
+
+/* Accessibility pass: make small interface text readable across the site */
+:root {
+  --type-ink: #38212c;
+  --type-muted: #674b58;
+}
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.hotel-nav-links a, .nav-login { font-size: 14px !important; }
+.hotel-brand small { font-size: 11px !important; letter-spacing: 1.4px !important; }
+.button, .hotel-nav-actions .button, .customer-book-button {
+  font-size: 13px !important;
+  line-height: 1.45;
+}
+.eyebrow, .eyebrow-light, .hero-caption, .auth-visual-caption,
+.room-number, .room-type, .room-rating, .image-note span,
+.moment-card-copy span {
+  font-size: 11px !important;
+  line-height: 1.5;
+  letter-spacing: .08em;
+}
+.hero-content > p, .section-intro, .room-card p,
+.experience-lead, .experience-item p, .customer-top p,
+.customer-section-heading p, .customer-room-body p,
+.booking-card p, .moment-heading p, .moment-card-copy p {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+}
+.trust-strip span, .room-card-bottom span, .room-card-bottom a,
+.hotel-footer > p, .hotel-footer > div a, .hotel-footer > small,
+.underlined-link, .hero-text-link, .quote-card small,
+.auth-back, .auth-switch, .auth-small-note,
+.booking-search-panel label, .auth-form-wrap form label,
+.admin-login-link a, .admin-remove-room {
+  font-size: 12px !important;
+  line-height: 1.6;
+}
+.booking-search-panel input, .booking-search-panel select,
+.auth-input, .admin-container form .form-control,
+.admin-container form .form-select {
+  font-size: 15px !important;
+  min-height: 46px;
+}
+.customer-room-price span, .booking-dates small,
+.booking-card-bottom small, .admin-table-panel thead th {
+  font-size: 12px !important;
+}
+.auth-subtitle { font-size: 14px !important; line-height: 1.75 !important; }
+.auth-form-wrap form label { color: #513843 !important; }
+.section-intro, .room-card p, .experience-lead, .experience-item p,
+.customer-section-heading p, .customer-room-body p,
+.booking-empty-panel p, .hotel-footer > p, .hotel-footer > div a,
+.auth-subtitle, .auth-switch, .auth-back {
+  color: #674b58 !important;
+}
+.hotel-nav-links a, .nav-login, .hotel-footer > div a,
+.customer-page a, .underlined-link {
+  color: #593443;
+}
+@media (max-width: 560px) {
+  .eyebrow, .eyebrow-light, .hero-caption, .auth-visual-caption,
+  .room-number, .room-type, .room-rating, .image-note span,
+  .moment-card-copy span { font-size: 11px !important; }
+  .hero-content > p, .section-intro, .room-card p,
+  .experience-lead, .experience-item p, .customer-top p,
+  .customer-section-heading p, .customer-room-body p,
+  .moment-heading p, .moment-card-copy p { font-size: 14px !important; }
+  .hotel-nav-links a, .nav-login, .button, .hotel-nav-actions .button {
+    font-size: 12px !important;
+  }
+}
