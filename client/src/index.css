@@ -534,3 +534,50 @@ body, .hotel-site, .customer-page { background: #fbf0f2 !important; color: #5138
   .moment-card { min-height: 250px; border-radius: 16px 16px 54px 16px; }
   .moment-card-copy h3 { font-size: 27px; }
 }
+
+
+/* Final surface pass: coffee-nude backgrounds paired with rosewater pink */
+:root {
+  --coffee-nude: #ead5c5;
+  --coffee-nude-light: #f2e3d8;
+  --coffee-nude-soft: #f7ece4;
+  --coffee-nude-deep: #d9bda9;
+  --rose-ink: #513843;
+  background: var(--coffee-nude);
+}
+html, body, #root,
+.hotel-site, .customer-page, .customer-content,
+.section-wrap, .moment-section,
+.auth-page, .auth-form-side,
+.hotel-nav, .hotel-footer,
+.experience-section, .experience-copy {
+  background-color: var(--coffee-nude) !important;
+}
+.hotel-nav { background-color: #ead5c5 !important; }
+.hotel-footer { background-color: #e3cbbb !important; }
+.trust-strip, .experience-section { background-color: #e4cbbb !important; }
+.moment-section { background-color: #ead5c5 !important; }
+.room-card, .customer-room-card, .booking-card,
+.booking-search-panel, .quote-card,
+.admin-table-panel, .admin-container form,
+.customer-empty, .booking-empty-panel,
+.admin-tabs .nav-link.active {
+  background: var(--coffee-nude-light) !important;
+  border-color: #dfc2b1 !important;
+}
+.quote-card { background: #f4e5db !important; }
+.booking-search-panel input, .booking-search-panel select,
+.auth-input, .admin-container form .form-control,
+.admin-container form .form-select {
+  background-color: var(--coffee-nude-soft) !important;
+  border-color: #d9bba8 !important;
+}
+.room-number, .image-note {
+  background: #f4e4d9ed !important;
+  border-color: #dfc2b1 !important;
+}
+.moment-card { background-color: #d9bda9 !important; }
+.hotel-nav, .hotel-footer, .section-wrap, .moment-section,
+.customer-content, .auth-form-side, .experience-section {
+  color: #513843;
+}
