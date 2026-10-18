@@ -52,6 +52,7 @@ function Login() {
             <button className="button button-dark auth-submit" type="submit" disabled={loading}>{loading ? "Signing in…" : "Let me in"} <span>↗</span></button>
           </form>
           <p className="auth-switch">New to HotelPro? <Link to="/signup">Create an account</Link></p>
+          <p className="auth-switch admin-login-link"><Link to="/admin-login">Administrator sign in</Link></p>
           <div className="auth-small-note">Your next beautiful memory is just around the corner.</div>
         </div>
       </section>
