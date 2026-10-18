@@ -47,9 +47,9 @@ function AdminLogin() {
           <h2>Sign in to your console.</h2>
           <p className="auth-subtitle">This sign-in is separate from customer accounts. Only the server can grant administrator access.</p>
           {error && <div className="alert alert-danger" role="alert">{error}</div>}
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} style={{ position: "relative", zIndex: 2, pointerEvents: "auto" }}>
             <label htmlFor="admin-login-email">Administrator email</label>
-            <input id="admin-login-email" className="form-control auth-input" name="email" type="email" autoComplete="username" placeholder="admin@example.com" value={form.email} onChange={handleChange} required />
+            <input id="admin-login-email" className="form-control auth-input" name="email" type="email" autoComplete="username" placeholder="admin@example.com" value={form.email} onChange={handleChange} style={{ position: "relative", zIndex: 3, pointerEvents: "auto", cursor: "text" }} required />
             <label htmlFor="admin-login-password">Password</label>
             <input id="admin-login-password" className="form-control auth-input" name="password" type="password" autoComplete="current-password" placeholder="Administrator password" value={form.password} onChange={handleChange} required />
             <button className="button button-dark auth-submit" type="submit" disabled={loading}>{loading ? "Verifying access…" : "Open admin console"} <span>↗</span></button>
