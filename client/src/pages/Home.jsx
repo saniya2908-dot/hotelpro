@@ -120,6 +120,33 @@ function Home() {
         </div>
       </section>
 
+
+      <section className="moment-section" aria-labelledby="moment-heading">
+        <div className="moment-heading">
+          <span className="eyebrow"><span className="eyebrow-line" /> A STAY THAT MATCHES YOUR MOOD</span>
+          <h2 id="moment-heading">What kind of <em>moment do you need?</em></h2>
+          <p>Whether you’re celebrating something special or simply craving a change of scene, let your next stay feel a little more personal.</p>
+        </div>
+        <div className="moment-grid">
+          <article className="moment-card">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85" alt="A peaceful bedroom with soft natural light" loading="lazy" />
+            <span className="moment-number">01</span>
+            <div className="moment-card-copy"><span>THE SLOW MORNING</span><h3>Room to exhale.</h3><p>For unhurried mornings, a good book and nowhere else to be.</p></div>
+          </article>
+          <article className="moment-card">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="A warmly styled boutique hotel living space" loading="lazy" />
+            <span className="moment-number">02</span>
+            <div className="moment-card-copy"><span>THE LITTLE CELEBRATION</span><h3>Make it memorable.</h3><p>For birthdays, milestones and moments worth holding close.</p></div>
+          </article>
+          <article className="moment-card">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85" alt="A calm, softly decorated room for a restful stay" loading="lazy" />
+            <span className="moment-number">03</span>
+            <div className="moment-card-copy"><span>THE QUIET RESET</span><h3>Your own little world.</h3><p>For a peaceful pause and a fresh perspective.</p></div>
+          </article>
+        </div>
+        <div className="moment-note"><span>♡</span> Your time away should feel like you <span>♡</span></div>
+      </section>
+
       <section className="quote-banner">
         <span className="quote-banner-flower">✳</span>
         <span className="eyebrow eyebrow-light">A LITTLE NOTE FOR YOU</span>
