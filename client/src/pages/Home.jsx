@@ -82,7 +82,7 @@ function Home() {
 
       <section className="section-wrap rooms-section" id="rooms">
         <div className="section-heading">
-          <div><span className="eyebrow"><span className="eyebrow-line" /> FIND YOUR FAVOURITE</span><h2>A little room to <em className="fall-in-love-highlight">fall in love with.</em></h2></div>
+          <div><span className="eyebrow"><span className="eyebrow-line" /> FIND YOUR FAVOURITE</span><h2>A little room to <em className="fall-in-love-highlight"><strong>fall in love with.</strong></em></h2></div>
           <Link className="underlined-link" to="/signup">Explore the collection <span>↗</span></Link>
         </div>
         <p className="section-intro">From a quiet weekend away to a special celebration, discover a space that matches your mood and makes every moment feel considered.</p>
