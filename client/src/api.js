@@ -1,14 +1,14 @@
 import axios from "axios";
 
-const configuredApiUrl = import.meta.env.VITE_API_URL;
-const apiBaseURL = (configuredApiUrl || (import.meta.env.PROD
+const apiBaseURL = import.meta.env.VITE_API_URL || (import.meta.env.PROD
   ? "https://hotelpro-api-p49g.onrender.com/api"
-  : "http://localhost:8001/api")).replace(/\/$/, "");
+  : "http://localhost:8001/api");
 
 const api = axios.create({
   baseURL: apiBaseURL,
 });
 
+// Attach the saved authentication token to API requests.
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token) {
