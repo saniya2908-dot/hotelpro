@@ -754,3 +754,14 @@ body {
     font-size: 12px !important;
   }
 }
+
+
+/* Fix hero description contrast: this paragraph sits on a dark photo */
+.hero-content > p {
+  color: #fff4f7 !important;
+  opacity: 1 !important;
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  text-shadow: 0 1px 3px rgba(35, 20, 28, .55);
+  max-width: 460px;
+}
