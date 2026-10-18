@@ -655,3 +655,13 @@ button, .btn, .primary-button, .hotel-button {
   font-weight: 700 !important;
   color: inherit;
 }
+
+
+/* Final explicit bold treatment for “fall in love with.” */
+h2 .fall-in-love-highlight,
+h2 .fall-in-love-highlight strong {
+  font-weight: 700 !important;
+  font-style: normal !important;
+  color: #9f456b !important;
+  -webkit-text-stroke: .25px currentColor;
+}
