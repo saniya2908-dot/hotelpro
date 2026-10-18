@@ -650,3 +650,8 @@ button, .btn, .primary-button, .hotel-button {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+
+.fall-in-love-highlight strong {
+  font-weight: 700 !important;
+  color: inherit;
+}
