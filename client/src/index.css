@@ -637,3 +637,15 @@ button, .btn, .primary-button, .hotel-button {
 .moment-card-copy p { color: #fff1f6 !important; }
 .moment-card-copy span { color: #ffd4e3 !important; }
 ::selection { background: #d995b0; color: #402632; }
+
+
+/* Distinct highlight for the rooms-section phrase */
+.fall-in-love-highlight {
+  color: #9f456b !important;
+  background: linear-gradient(transparent 58%, #efc2d3 58%, #efc2d3 91%, transparent 91%);
+  padding: 0 .08em .03em;
+  border-radius: 3px;
+  text-decoration: none;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
